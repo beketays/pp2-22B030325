@@ -21,7 +21,6 @@ bool("abc")
 bool(123)
 bool(["apple", "cherry", "banana"])
 
-#######################################
 
 class myclass():
   def __len__(self):
@@ -30,14 +29,12 @@ class myclass():
 myobj = myclass()
 print(bool(myobj))
 
-#######################################
 
 def myFunction() :
   return True
 
 print(myFunction())
 
-######################################
 
 def myFunction() :
   return True
@@ -47,7 +44,6 @@ if myFunction():
 else:
   print("NO!")
 
-######################################
 
 x = 200
 print(isinstance(x, int))
