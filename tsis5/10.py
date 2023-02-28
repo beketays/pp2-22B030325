@@ -2,9 +2,10 @@
 
 import re
 
-txt = "PythonIsAPopularProgrammingLanguage"
+def func(word):
+    return word.group("a")+ "_" + word.group("b").lower()
 
-x = r"(?<!^)(?=[A-Z])"
-s = re.sub(x, '_', txt).lower()
+txt = "mySuperVar" 
+x = "(?P<a>[a-z])(?P<b>[A-Z])+"
 
-print(s)
+print(re.sub(x, func, txt))
