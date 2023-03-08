@@ -1,14 +1,15 @@
 # Write a Python program with builtin function that accepts a string and 
 # calculate the number of upper case letters and lower case letters
-import os  # current working directory / путь к текущей папке
 
-file = open(r"/Users/symbat/Documents/pp2-22B030325/tsis6/abc.txt", "r")
+string = "LowerAndUpper"
+cnt = 0
+cnt2 = 0
+for i in string:
+    if(i.islower()):
+        cnt+=1
+    elif(i.isupper()):
+        cnt2+=1
 
-def gen(file):
-    with open(file, "r") as f:
-        for element in f:
-            yield element
+print("Lowercase letter quantity:", cnt)
+print("Uppercase letter quantity:", cnt2)
 
-iter(gen(file))
-
-print(next(gen(file)))
