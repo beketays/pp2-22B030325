@@ -5,6 +5,6 @@ import math
 
 a = int(input())
 b = int(input())
-time.sleep(b/1000) 
+time.sleep(b/1000)  #кнопка остановки
 
 print("Square root of", a, " after", b, "miliseconds is", math.sqrt(a))
