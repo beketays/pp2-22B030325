@@ -12,11 +12,10 @@ WIDTH, HEIGHT = 400, 700
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 
 #choosing path and setting up images
-path = r"/Users/symbat/Documents/pp2-22B030325/tsis8/racer"
-background_image = pygame.image.load(path + "/Users/symbat/Documents/pp2-22B030325/tsis8/materials/AnimatedStreet.png" )# "./materials/AnimatedStreet.png")
-enemy_image = pygame.image.load(path + "/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Enemy.png")#'Enemy.png')
-player_image = pygame.image.load(path + "/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Player.png")#'Player.png')
-coin_image = pygame.image.load(path + "/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Coin.png")#'Coin.png')
+background_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/AnimatedStreet.png")
+enemy_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Enemy.png")
+player_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Player.png")
+coin_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Coin.png")
 
 background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))
 
