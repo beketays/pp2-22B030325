@@ -11,6 +11,6 @@ class Square(Shape):
     def __init__(self, l):
         Shape.__init__(self, l)
         
-x=Square(Shape)
+x=Square()
 x.area()    
 

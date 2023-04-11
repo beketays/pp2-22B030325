@@ -13,6 +13,6 @@ class Rectangle(Shape):
     def __init__(self, l, w):
         Shape.__init__(self, l, w)
 
-x=Rectangle(Shape, Shape)
+x=Rectangle(l =, w =)
 x.area()
 

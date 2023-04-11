@@ -6,6 +6,7 @@ def imdb(movie, movies):
             position = x
     if int(movies[position]["imdb"])> 5.5:
         return True
+    # if int(movies[position]["imdb"]) < 7
 
 
 movies = [

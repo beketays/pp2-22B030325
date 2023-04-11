@@ -9,6 +9,6 @@ class myclass:
     def printString(self):
         print(self.txt.upper())
         
-p1=myclass(input())
+p1=  myclass(input())
 p1.printString()
 

@@ -16,6 +16,6 @@ class Account:
     def withdrawal(self):
         self.balance += self.withdraw
 
-x=Account 
+x = Account 
 
  
