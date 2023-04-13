@@ -12,7 +12,8 @@ WIDTH, HEIGHT = 400, 700
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 
 #choosing path and setting up images
-background_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/AnimatedStreet.png")
+path = r"/Users/symbat/Documents/pp2-22B030325/tsis8/racer"
+background_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/AnimatedStreet.png" )
 enemy_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Enemy.png")
 player_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Player.png")
 coin_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/materials/Coin.png")
@@ -20,26 +21,28 @@ coin_image = pygame.image.load(r"/Users/symbat/Documents/pp2-22B030325/tsis8/mat
 background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))
 
 #setting up fonts
-font = pygame.font.SysFont("Verdana", 30)
+font = pygame.font.SysFont("Times New Roman", 30)
 font_small = pygame.font.SysFont("Verdana", 20)
 game_over = font.render("Game Over", True, BLACK)
 
 clock = pygame.time.Clock()
 
-#defining enemy
-class Enemy():
+class Enemy():   #defining enemy
     def __init__(self):
         self.speed = 10
         self.image = enemy_image
         self.rect = self.image.get_rect()
 
         #choosing random point in x-axis to spawn enemy
-        random_width = random.randint(self.rect.width, WIDTH - self.rect.width)
-        self.rect.center = (random_width, 0)
+        random_width = random.randint(self.rect.width, WIDTH - self.rect.width) #random appearance of the enemy
+        self.rect.center = (random_width, 0) 
+        #spawn at a random x-coordinate at the top of the screen.
+
 
 
     def update(self):
         global SCORE
+        #determines the vertical position of the enemy on the screen
         self.rect.y += self.speed // 1
 
         #cheking if enemy is outside of screen
@@ -154,7 +157,7 @@ def main():
         enemy.draw()
 
         #showing score and number of coins
-        score = font_small.render("Your score: " + str(SCORE), True, BLACK)
+        score = font.render("Your score: " + str(SCORE), True, BLACK)
         coins_text = font_small.render("Coins collected: " + str(COLLECTED), True, BLACK)
         SCREEN.blit(score, (0, 0))
         SCREEN.blit(coins_text, (WIDTH // 2, 0))

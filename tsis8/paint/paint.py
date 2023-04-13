@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+
 pygame.init()
 
 WIDTH, HEIGHT = 640, 480
@@ -11,6 +12,7 @@ BLACK = (0, 0, 0)
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
+
 
 def drawLineBetween(screen, element1, element2):
     start, color, mode, width = element1
@@ -30,6 +32,7 @@ def drawLineBetween(screen, element1, element2):
     
     elif mode == 2: drawCircleBetween(screen, element1, element2) # to keep old drawings unchanged
     elif mode == 1: drawRectBetween(screen, element1, element2)
+
 
 def drawRectBetween(screen, element1, element2):
     start, color, mode, width = element1
@@ -51,6 +54,9 @@ def drawRectBetween(screen, element1, element2):
     elif mode == 2: drawCircleBetween(screen, element1, element2) # to keep old drawings unchanged
     elif mode == 0: drawLineBetween(screen, element1, element2)
 
+
+
+
 def drawCircleBetween(screen, element1, element2):
     start, color, mode, radius = element1
     end = element2[0]
@@ -71,11 +77,17 @@ def drawCircleBetween(screen, element1, element2):
     elif mode == 1: drawRectBetween(screen, element1, element2) # to keep old drawings unchanged
     elif mode == 0: drawLineBetween(screen, element1, element2)
 
+
+
+
 def enter_own():
     num1 = int(input("Enter the first value: ")) % 256
     num2 = int(input("Enter the second value: ")) % 256
     num3 = int(input("Enter the third value: ")) % 256
     return (num1, num2, num3)
+
+
+
 
 def main():
     radius = 15
@@ -146,6 +158,9 @@ def main():
                 
         pygame.display.flip()
         clock.tick(60)
+
+
+
 
 if __name__ == "__main__":
     main()

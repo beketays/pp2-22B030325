@@ -12,7 +12,7 @@ WIDTH, HEIGHT = 400, 700
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 
 #choosing path and setting up images
-path = r"/Users/symbat/Documents/pp2-22B030325/tsis9/racer//"   #'C:\Users\Сырым\Documents\pp2-22B030546\tsis9\racer2.0\\'
+path = r"/Users/symbat/Documents/pp2-22B030325/tsis9/racer//" 
 background_image = pygame.image.load(path + 'AnimatedStreet.png')
 enemy_image = pygame.image.load(path + 'Enemy.png')
 player_image = pygame.image.load(path + 'Player.png')
