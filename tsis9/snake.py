@@ -201,7 +201,7 @@ def main():
             to_append -= 1
 
         # re-spawn food when it's expired
-        if time.perf_counter() - spawn_time > 5:
+        if time.perf_counter() - spawn_time > 1:
             spawn_time = time.perf_counter()
             food.generate_new(snake.body)
 

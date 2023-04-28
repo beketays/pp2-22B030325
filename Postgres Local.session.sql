@@ -1,0 +1,1 @@
+create table hospital (id SERIAL PRIMARY KEY, name varchar(100), bet_count serial)
