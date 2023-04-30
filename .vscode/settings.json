@@ -5,7 +5,7 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "Postgres Local",
+            "name": "name ",
             "database": "postgres",
             "username": "postgres",
             "password": "martini"
