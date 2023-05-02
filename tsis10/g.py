@@ -1,25 +1,26 @@
-import psycopg2
+# Implement updating data in the table (change user first name or phone)
 
+
+import psycopg2
 
 # Establish a connection to the database
 conn = psycopg2.connect(
     host="localhost",
-    database="postgres",
+    port=5432,
+    dbname="postgres",
     user="postgres",
-    password="martini")
-
-
+    password="martini"
+)
 
 cur = conn.cursor()
 
 # Execute an INSERT statement to add a new employee to the employees table
 
 
+cur.execute("DELETE FROM Phonebook WHERE first_name = 'leer';")
 
-hospital = "INSERT INTO hospital(name, bet_count) VALUES (%s, %s)"
 
 
-cur.execute(hospital, ('avbs',600))
 
 # Commit the transaction
 conn.commit()

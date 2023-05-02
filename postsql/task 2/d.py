@@ -1,7 +1,7 @@
 import psycopg2
 
 
-# Establish a connection to the database
+
 conn = psycopg2.connect(
     host="localhost",
     database="postgres",
@@ -12,16 +12,15 @@ conn = psycopg2.connect(
 
 cur = conn.cursor()
 
-# Execute an INSERT statement to add a new employee to the employees table
 
 
-cur.execute("UPDATE Doctor SET Speciality = %s, Salary = %s WHERE Doctor_Name = %s;",('general', 8000, 'Susan'))
+cur.execute("UPDATE Doctor SET Speciality = %s, Salary = %s WHERE Doctor_Name = %s;",('general', 8000, 'David'))
 
 
 
-# Commit the transaction
+
 conn.commit()
 
-# Close the cursor and database connection
+
 cur.close()
 conn.close()

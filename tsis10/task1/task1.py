@@ -6,7 +6,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="postgres",
     user="postgres",
-    password="martini")
+    password="postgres")
 
 
 
@@ -15,11 +15,15 @@ cur = conn.cursor()
 # Execute an INSERT statement to add a new employee to the employees table
 
 
+cur.execute("select * from hospital ORDER BY name ASC;")
 
-hospital = "INSERT INTO hospital(name, bet_count) VALUES (%s, %s)"
+rows = cur.fetchall()
 
+# Process the retrieved data
+for row in rows:
+    # Process each row
+    print(row)
 
-cur.execute(hospital, ('avbs',600))
 
 # Commit the transaction
 conn.commit()

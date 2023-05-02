@@ -1,1 +1,1 @@
-SELECT * FROM Doctor
+SELECT * FROM hospital

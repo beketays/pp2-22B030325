@@ -16,7 +16,7 @@ cur = conn.cursor()
 
 
 
-hospital = "INSERT INTO hospital(name, bet_count) VALUES (%s)"
+hospital = "INSERT INTO hospital(name, bet_count) VALUES (%s, %s)"
 
 
 cur.execute(hospital, ('pjj',600))
