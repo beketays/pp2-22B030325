@@ -14,7 +14,7 @@ cur = conn.cursor()
 
 
 
-cur.execute("UPDATE Doctor SET Speciality = %s, Salary = %s WHERE Doctor_Name = %s;",('general', 8000, 'David'))
+cur.execute("UPDATE Doctor SET Speciality = %s, Salary = %s WHERE Doctor_Name = %s;",('general', 10000, 'David'))
 
 
 
